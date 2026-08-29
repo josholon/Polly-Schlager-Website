@@ -1,0 +1,599 @@
+/* ==========================================
+   FARB- & SCHRIFT-VARIABLEN
+   ========================================== */
+:root {
+    --pink-neon: #FF4088;    /* Knalliges Logo-Pink */
+    --pink-subtle: #D81B60;  /* Dunkleres Rosa für Untertitel */
+    --text-white: #E0E0E0;   /* Lesbarer Text */
+    --black: #000000;
+    --font-heading: 'Stick No Bills', sans-serif;
+    --font-body: 'Montserrat', sans-serif;
+}
+
+/* ==========================================
+   GRUNDLEGENDE EINSTELLUNGEN
+   ========================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--black);
+    color: var(--text-white);
+    font-family: var(--font-body);
+    letter-spacing: 0.5px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* ==========================================
+   HAUPTBEREICH LAYOUT
+   ========================================== */
+main {
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+    flex: 1;
+    width: 100%;
+}
+
+/* ==========================================
+   LOGO & NAVIGATION
+   ========================================== */
+.logo-section {
+    text-align: center;
+    width: 100%;
+}
+
+.main-logo {
+    max-width: 80%;
+    width: 350px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.main-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.main-nav a {
+    color: var(--pink-neon);
+    text-decoration: none;
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    transition: 0.2s;
+}
+
+.main-nav a:hover, 
+.main-nav a.active {
+    text-shadow: 0 0 10px var(--pink-neon);
+    text-decoration: underline;
+}
+
+/* ==========================================
+   ALLGEMEINE SEKTIONEN & TITEL
+   ========================================== */
+.page-title {
+    font-family: var(--font-heading);
+    font-size: 3.5rem;
+    color: var(--pink-neon);
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.section-container,
+.members-section,
+.gallery-section,
+.band-bio {
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.section-title {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    color: var(--pink-neon);
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.swipe-hint {
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--pink-subtle);
+    margin-bottom: 20px;
+}
+
+.bio-text {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: var(--text-white);
+    max-width: 700px;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto; /* Garantiert perfekte Zentrierung */
+    padding: 0 15px; /* Verhindert Anstoßen an den Rändern */
+    box-sizing: border-box;
+}
+
+.bio-quote {
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    color: var(--pink-neon);
+    text-align: center;
+    max-width: 700px;
+    width: 100%;
+    margin: 25px auto;
+    padding: 0 15px;
+    line-height: 1.35;
+    box-sizing: border-box;
+}
+
+/* ==========================================
+   STARTSEITE & KONTAKT (BILDER & VIDEO)
+   ========================================== */
+.video-section, 
+.contact-photo-wrapper {
+    width: 100%;
+    max-width: 750px;
+    display: flex;
+    justify-content: center;
+}
+
+video, 
+.contact-photo {
+    width: 100%;
+    height: auto;
+    border: none;
+    display: block;
+}
+
+/* ==========================================
+   MEDIA SEITE
+   ========================================== */
+.media-container {
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 25px;
+}
+
+.media-photo-wrapper {
+    width: 100%;
+    max-width: 550px;
+    margin-bottom: 10px;
+}
+
+.media-photo {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.chartbusters-box {
+    border: 2px solid var(--pink-neon);
+    padding: 20px 25px;
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(255, 64, 136, 0.2);
+    margin-bottom: 10px;
+}
+
+.chartbusters-box p {
+    font-size: 1rem;
+    color: var(--text-white);
+    margin-bottom: 5px;
+}
+
+.chartbusters-box strong {
+    display: block;
+    font-size: 1.2rem;
+    color: var(--pink-neon);
+    margin-bottom: 12px;
+}
+
+.shop-link {
+    display: inline-block;
+    color: var(--pink-neon);
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    text-decoration: underline;
+    transition: 0.2s;
+}
+
+.shop-link:hover {
+    color: var(--text-white);
+    text-shadow: 0 0 10px var(--pink-neon);
+}
+
+/* ==========================================
+   SLIDER, KARTEN & IMPRESSIONEN (DESKTOP)
+   ========================================== */
+.slider-container {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 15px 5px 30px 5px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    align-items: stretch;
+    justify-content: center;
+}
+
+/* Scrollbar Styling */
+.slider-container::-webkit-scrollbar {
+    height: 6px;
+}
+
+.slider-container::-webkit-scrollbar-thumb {
+    background: var(--pink-neon);
+    border-radius: 3px;
+}
+
+/* Musiker-Karten */
+.member-card {
+    flex: 1 1 280px;
+    max-width: 300px;
+    scroll-snap-align: center;
+    padding: 20px;
+    text-align: center;
+    background-color: #080808;
+    border: 1px solid rgba(255, 64, 136, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.member-img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    display: block;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    transition: transform 0.3s ease;
+}
+
+.member-card:hover .member-img {
+    transform: scale(1.03);
+}
+
+.member-card h3 {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    color: var(--pink-neon);
+    margin-bottom: 5px;
+}
+
+.member-card .role {
+    display: block;
+    font-weight: bold;
+    color: var(--pink-subtle);
+    margin-bottom: 12px;
+}
+
+.member-card p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    color: var(--text-white);
+}
+
+/* Impressionen Gallery Slider */
+.gallery-slider {
+    justify-content: flex-start;
+}
+
+.gallery-img {
+    flex: 0 0 300px;
+    height: 200px;
+    object-fit: contain; /* Zeigt das gesamte Bild ohne Beschnitt an */
+    background-color: #080808; /* Füllt eventuelle Ränder passend zum Design schwarz/dunkel auf */
+    scroll-snap-align: start;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 12px var(--pink-neon);
+}
+
+/* ==========================================
+   LIGHTBOX MODAL (GROSSANSICHT BEIM TIPPEN)
+   ========================================== */
+.lightbox-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox-content {
+    max-width: 90%;
+    max-height: 85vh;
+    object-fit: contain;
+    border: 2px solid var(--pink-neon);
+    box-shadow: 0 0 20px var(--pink-neon);
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: var(--pink-neon);
+    font-size: 3rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* ==========================================
+   BUTTONS & SOCIAL MEDIA LINKS
+   ========================================== */
+.social-links {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+.social-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--pink-neon);
+    border: 2px solid var(--pink-neon);
+    padding: 8px 16px;
+    text-decoration: none;
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    transition: 0.2s;
+}
+
+.social-btn:hover {
+    background-color: var(--pink-neon);
+    color: var(--black);
+    box-shadow: 0 0 12px var(--pink-neon);
+}
+
+/* ==========================================
+   FOOTER
+   ========================================== */
+footer {
+    margin-top: auto;
+    padding: 25px;
+    text-align: center;
+    font-size: 0.95rem;
+    font-family: var(--font-body);
+    color: var(--text-white);
+    border-top: 1px solid rgba(255, 64, 136, 0.1);
+}
+
+footer p {
+    margin-bottom: 8px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    align-items: center;
+}
+
+.footer-links a {
+    color: var(--pink-neon);
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.footer-links a:hover {
+    text-shadow: 0 0 8px var(--pink-neon);
+    text-decoration: underline;
+}
+
+.footer-links span {
+    color: var(--pink-subtle);
+    user-select: none;
+}
+
+/* ==========================================
+   MOBILE OPTIMIERUNG (SMARTPHONES)
+   ========================================== */
+@media screen and (max-width: 768px) {
+    /* 1. Grund-Container anpassen */
+    body {
+        padding: 10px;
+    }
+
+    main {
+        width: 100%;
+        max-width: 100%;
+        padding: 0 10px;
+    }
+
+    /* 2. Logo skalieren */
+    .main-logo {
+        max-width: 85%;
+        height: auto;
+    }
+
+    /* 3. Navigation mobil untereinander */
+    .main-nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .main-nav a {
+        font-size: 1.4rem;
+        padding: 8px 0;
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    /* 4. Überschriften & Fließtext */
+    .page-title {
+        font-size: 2.2rem;
+        margin-top: 15px;
+    }
+
+    .bio-text {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    /* 5. Bildskalierung */
+    .media-photo, 
+    .contact-photo,
+    .band-member-img {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto;
+    }
+
+    /* 6. Mobile Bandmitglieder-Slider (Exakt 1 Karte im Fokus zum Wischen) */
+    .slider-container {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        gap: 0;
+        padding: 10px 0 25px 0;
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .member-card {
+        flex: 0 0 100%;
+        max-width: 100%;
+        scroll-snap-align: center;
+        scroll-snap-stop: always;
+        padding: 20px 15px;
+        box-sizing: border-box;
+    }
+
+    .member-img {
+        width: 100%;
+        max-width: 280px;
+        height: 280px;
+        margin: 0 auto 15px auto;
+        object-fit: cover;
+    }
+
+    .gallery-img {
+        flex: 0 0 85vw;
+        max-width: 280px;
+        scroll-snap-align: center;
+    }
+
+    /* 7. Touch-freundliche Buttons */
+    .social-links {
+        flex-direction: column;
+        width: 100%;
+        max-width: 300px;
+        gap: 12px;
+    }
+
+    .social-btn {
+        width: 100%;
+        font-size: 1.1rem;
+        padding: 14px 20px;
+        justify-content: center;
+        box-sizing: border-box;
+    }
+
+    /* 8. Footer mobil */
+    footer {
+        padding: 20px 10px;
+        font-size: 0.9rem;
+    }
+}
+
+/* YouTube Wrapper & Custom Cover Styling */
+.video-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    aspect-ratio: 16 / 9;
+    background-color: #000;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.video-container iframe,
+.video-poster {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.video-poster {
+    z-index: 2;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.video-poster img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.play-button {
+    position: absolute;
+    font-size: 2.5rem;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.7);
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 5px; /* Optische Zentrierung des Dreiecks */
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.video-poster:hover .play-button {
+    transform: scale(1.1);
+    background: rgba(226, 0, 116, 0.9); /* Akzentfarbe beim Hover */
+}

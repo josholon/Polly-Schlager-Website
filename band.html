@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POLLY | Die Band</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Stick+No+Bills:wght@700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+</head>
+<body>
+
+    <main>
+        <!-- Logo -->
+        <section class="logo-section">
+            <img src="assets/logo.png" alt="POLLY Logo" class="main-logo">
+        </section>
+
+        <!-- Navigation -->
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Startseite</a></li>
+                <li><a href="band.html" class="active">Band</a></li>
+                <li><a href="media.html">Media</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+        </nav>
+
+        <!-- Band Bio -->
+        <section class="band-bio">
+            <h1 class="page-title">POLLY !</h1>
+            <p class="bio-text">
+                Am Anfang war die Stille – unendlich, träge und verdammt langweilig. Kein höheres Wesen hatte die Hand im Spiel, denn Himmel und Hölle waren schlichtweg schlecht organisierte Verwaltungsapparate ohne liquide Mittel. Doch das Universum, ein rein physikalischer Unfall, verlangte nach Erschütterung. Und so spuckte die brennende Suppe der Evolution drei Gestalten auf die Erde, um den verendenden Planeten aus seiner geistigen Agonie zu prügeln: Polly!
+            </p>
+            
+<p class="bio-quote">
+    Es war nicht das Wort, das Fleisch wurde,<br>
+    sondern der Schund der Welt, der lautstark widersprach.
+</p>
+
+            <p class="bio-text" style="margin-top: 15px;">
+                Gemeinsam zünden Polly ein Licht an, das so hell brennt, dass es selbst die düstersten Winkel gesellschaftlicher Verblendung ausleuchtet. Sie sind kein göttlicher Plan, sondern das absolut notwendige Antidot gegen den Wahnsinn der Moderne. Mit zynischem Witz, politisch unerschütterlicher Haltung und einer Soundwand aus reiner Haltung ziehen sie los, um die Welt nicht nur zu verändern, sondern sie endlich aus ihrem Tiefschlaf zu wecken.
+            </p>
+        </section>
+
+        <!-- Wischbare Musiker-Karten -->
+        <section class="members-section">
+            <h2 class="section-title">Die Bandmitglieder</h2>
+            <p class="swipe-hint">← Wischen zum Entdecken →</p>
+            <div class="slider-container">
+                <!-- Mitglied 1 -->
+                <div class="member-card">
+                    <img src="assets/deet.jpg" alt="Deet Van De Beer" class="member-img">
+                    <h3>Deet Van De Beer</h3>
+                    <span class="role">Gitarre</span>
+                    <p>Seine Gitarre klingt wie das schrille Zerbersten falscher Ideale – ein Klanggewitter, das die morschen Pfeiler von Kirchen, Banken und autoritären Regime-Fassaden im Bruchteil einer Sekunde zu Staub zermahlt. Er braucht keine heiligen Schriften; seine Akkorde sind der einzig wahre Beweis für die Existenz einer absoluten moralischen Kante.</p>
+                </div>
+
+                <!-- Mitglied 2 -->
+                <div class="member-card">
+                    <img src="assets/buzz.jpg" alt="Buzz T Saufenberg" class="member-img">
+                    <h3>Buzz T Saufenberg</h3>
+                    <span class="role">Bass</span>
+                    <p>Sein Frequenzbereich erschüttert das Fundament korrupter Machtstrukturen so nachhaltig, dass Diktatoren weltweit das große Frösteln bekommen. Buzz versteht die Welt als biomechanischen Scherz, den man am besten mit einem donnernden Tiefton und feinstem Klamauk quittiert.</p>
+                </div>
+
+                <!-- Mitglied 3 -->
+                <div class="member-card">
+                    <img src="assets/gil.jpg" alt="Gil Vite Vide" class="member-img">
+                    <h3>Gil Vite Vide</h3>
+                    <span class="role">Schlagzeug</span>
+                    <p>Sein Takt ist der Herzschlag einer neuen Zeitrechnung. Jeder Schlag auf die Snare ist ein Schlag ins Gesicht von Faschismus, Gier und sozialer Ungerechtigkeit – präzise, unerbittlich und absolut atemberaubend.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Wischbare Impressionen / Galerie (10 Fotos) -->
+        <section class="gallery-section">
+            <h2 class="section-title">Impressionen</h2>
+            <p class="swipe-hint">← Tippen für Großansicht / Wischen →</p>
+            <div class="slider-container gallery-slider">
+                <img src="assets/impression1.jpg" alt="Live Impression 1" class="gallery-img" onclick="openLightbox(this)">
+                <img src="assets/impression2.jpg" alt="Live Impression 2" class="gallery-img" onclick="openLightbox(this)">
+                <img src="assets/impression3.jpg" alt="Live Impression 3" class="gallery-img" onclick="openLightbox(this)">
+                <img src="assets/impression4.jpg" alt="Live Impression 4" class="gallery-img" onclick="openLightbox(this)">
+                <img src="assets/impression5.jpg" alt="Live Impression 5" class="gallery-img" onclick="openLightbox(this)">
+                <img src="assets/impression6.jpg" alt="Live Impression 6" class="gallery-img" onclick="openLightbox(this)">
+                <img src="assets/impression7.jpg" alt="Live Impression 7" class="gallery-img" onclick="openLightbox(this)">
+                <img src="assets/impression8.jpg" alt="Live Impression 8" class="gallery-img" onclick="openLightbox(this)">
+                <img src="assets/impression9.jpg" alt="Live Impression 9" class="gallery-img" onclick="openLightbox(this)">
+                <img src="assets/impression10.jpg" alt="Live Impression 10" class="gallery-img" onclick="openLightbox(this)">
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 POLLY. Alle Rechte vorbehalten.</p>
+        <div class="footer-links">
+            <a href="impressum.html">Impressum</a>
+            <span>|</span>
+            <a href="datenschutz.html">Datenschutz</a>
+        </div>
+    </footer>
+
+    <!-- Lightbox Element für Großansicht -->
+    <div id="lightbox" class="lightbox-modal" onclick="closeLightbox()">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+    </div>
+
+    <!-- Script für Großansicht -->
+    <script>
+        function openLightbox(element) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            lightboxImg.src = element.src;
+            lightbox.style.display = 'flex';
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').style.display = 'none';
+        }
+    </script>
+
+</body>
+</html>
